@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hivex", "hivex.vcxproj", "{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Debug|x64.ActiveCfg = Release|x64
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Debug|x64.Build.0 = Release|x64
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Debug|x86.ActiveCfg = Debug|Win32
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Debug|x86.Build.0 = Debug|Win32
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Release|x64.ActiveCfg = Release|x64
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Release|x64.Build.0 = Release|x64
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Release|x86.ActiveCfg = Release|Win32
+		{D6310EDD-067B-4A29-8FC6-95EBA7F4808F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A38E97A8-9B6E-402A-9591-2A07E7C65FBB}
+	EndGlobalSection
+EndGlobal
