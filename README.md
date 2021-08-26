@@ -6,14 +6,24 @@ Sample code enumerates all hive nodes and prints to console.
 sample code also includes TinySha1 for calculating digest - by Saurav Mohapatra (https://github.com/mohaps/TinySHA1)
 extra contains:
 
+Get a registry hive simply by executing this on Windows:
+```
+ 
+ > bcdedit /export "test.bcd"
+ > hivex test.bcd
+ ...
+ ```
+ 
 
 
-
+example program:
 ```c++
 
- void simple_example()
+#include "hivex/hivex.h"
+
+int main(int argc, const char** argv)
 {
-	hive_h* hive = hivex_open("test.bcd", 0);
+	hive_h* hive = hivex_open("test.bin", 0);
 	hive_node_h root = hivex_root(hive);
 
 	hive_node_h *child_it, *pchildren = hivex_node_children(hive, root);
@@ -36,6 +46,29 @@ extra contains:
 	hivex_close(hive);
 }
 ```
+
+or look at hivex.cpp for an example using the extra's.
+
+extras:
+findnode.h: 
+```c++
+hive_node_h findkey(hive_h* hive, hive_node_h node, const char* str);
+```
+
+printnode.h:
+```c++
+void printnode(hive_h* hive, hive_node_h node, bool hexDump = true /* enable hexdump */);
+```
+
+hasnode.h:
+```c++
+typedef void (process_hash_func)(void *ctx, const unsigned char *in, unsigned long inlen);
+
+void hashenumerate(process_hash_func hasher, void *ctx, hive_h* hive, hive_node_h node);
+```
+
+sha1.h: see (https://github.com/mohaps/TinySHA1)
+
 
 TODO List:
 - [ ] replace console ouput logging.
