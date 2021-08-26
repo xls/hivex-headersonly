@@ -6,7 +6,7 @@ Sample code enumerates all hive nodes and prints to console.
 sample code also includes TinySha1 for calculating digest - by Saurav Mohapatra (https://github.com/mohaps/TinySHA1)
 extra contains:
 
-findnode.h -> 
+
 
 
 ```c++
@@ -38,8 +38,9 @@ findnode.h ->
 ```
 
 TODO List:
-[] replace console ouput logging.
-[] create a c++ wrapper.
+- [ ] replace console ouput logging.
+- [ ] create a c++ wrapper.
+
 
 
 Original hivex code from https://github.com/libguestfs/hivex
