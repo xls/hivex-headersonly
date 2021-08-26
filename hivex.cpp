@@ -38,7 +38,7 @@ int main(int argc, const char** argv)
 	printf("argc: %d\n", argc);
 	
 	char filename[1024];
-	strcpy(filename, "user"); // default
+	strcpy(filename, "test.bcd"); // default
 
 	if (argc > 1)
 		strcpy(filename, argv[1]);
@@ -50,9 +50,7 @@ int main(int argc, const char** argv)
 	if (hive != nullptr)
 	{
 		hive_node_h root = hivex_root(hive);
-
-		printf("find key\n");
-		
+	
 		// find a node and print it
 		auto node = findkey(hive, root, "NewStoreRoot\\Objects\\{4662f11f-cbc8-11ea-b16f-b995a37ba28c}");
 		if (node)
@@ -61,11 +59,8 @@ int main(int argc, const char** argv)
 			printnode(hive, node);
 		}
 		
-
-		
 		// print root node and its children
 		printnode(hive, root,true);
-
 
 		// hash all nodes -> hash(size+key+value);
 		hashenumerate(hasher, &sha1, hive, root);
